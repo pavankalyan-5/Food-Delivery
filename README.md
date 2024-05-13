@@ -1,3 +1,10 @@
+
+<img width="1792" alt="Screenshot 2024-05-13 at 4 03 18 PM" src="https://github.com/pavankalyan-5/Food-Delivery/assets/63582758/9d58e867-e847-4ad9-a1c4-d034c88d3024">
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
 # Project Setup
 
 Welcome to food delivery project setup with Vite.js! This README will guide you through the steps to get started with development.
