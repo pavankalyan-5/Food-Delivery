@@ -45,4 +45,19 @@ Follow these steps to set up and run the project on your local machine:
    ```bash
    npm run dev
 
-6. Open your browser and visit http://localhost:5173/ to view the app.
+6. To run back-end navigate to the back end directory:
+
+   ```bash
+   cd back-end
+
+7. Install dependencies using npm or yarn:
+
+   ```bash
+   npm install
+
+8. Start the development server:
+   
+   ```bash
+   npm run server
+
+9. Open your browser and visit http://localhost:5173/ to view the app.
