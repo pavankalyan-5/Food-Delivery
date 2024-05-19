@@ -60,19 +60,4 @@ Follow these steps to set up and run the project on your local machine:
    ```bash
    npm run server
 
-9. To run admin ui navigate to the admin directory:
-
-   ```bash
-   cd admin
-
-10. Install dependencies using npm or yarn:
-
-   ```bash
-   npm install
-
-11. Start the development server:
-   ```bash
-   npm run dev
-
-
-12. Open your browser and visit http://localhost:5173/ to view the app.
+9. Open your browser and visit http://localhost:5173/ to view the app.
