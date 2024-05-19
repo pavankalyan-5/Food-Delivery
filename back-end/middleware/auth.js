@@ -14,4 +14,9 @@ const authMiddleWare = async (req, res, next) => {
         });
     }
 }
+
+export const debuggerLog = (req, res, next) => {
+    console.log(`Incoming request for ${req.originalUrl}`);
+    next();
+}
 export default authMiddleWare;

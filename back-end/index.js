@@ -10,6 +10,7 @@ import path from 'path';
 
 const __dirname = path.resolve();
 
+console.log('__dirname', __dirname)
 // app config
 const app = express();
 const port = 4000;

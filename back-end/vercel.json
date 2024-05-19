@@ -15,6 +15,7 @@
         "src": "/(.*)",
         "dest": "/"
       }
-    ]
+    ],
+    "outputDirectory": "public"
   }
   
