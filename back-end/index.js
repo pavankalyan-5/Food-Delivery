@@ -15,7 +15,7 @@ const port = 4000;
 // middleware
 app.use(express.json());
 app.use(cors({
-  origin: "*",
+  origin: ["https://tomato-virid.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 }));

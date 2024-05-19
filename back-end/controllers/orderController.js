@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // place order
 const placeOrder = async (req, res) => {
-    const frontendUrl = "http://localhost:5174";
+    const frontendUrl = "https://tomato-virid.vercel.app";
     const { userId, amount, items, address } = req.body;
     try{
         const newOrder = new orderModel({
