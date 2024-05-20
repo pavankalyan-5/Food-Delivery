@@ -17,7 +17,7 @@ const port = 4000;
 // middleware
 app.use(express.json());
 app.use(cors({
-  origin: ["https://tomato-virid.vercel.app", "https://food-delivery-admin-phi.vercel.app/"],
+  origin: ["https://tomato-virid.vercel.app", "https://food-delivery-admin-phi.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 }));
