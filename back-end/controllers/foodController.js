@@ -45,7 +45,7 @@ export const deleteFoodItem = async (req, res) => {
   const id = req.params.id;
   try {
     const foodItem = await foodModel.findById(id);
-    fs.unlink(`uploads/${foodItem.image}`, (err) => {
+    fs.unlink(`public/${foodItem.image}`, (err) => {
       if (err) {
         console.log(err);
       }
@@ -68,7 +68,7 @@ export const deleteAllFoodItems = async (req, res) => {
     try {
         const foodItems = await foodModel.find();
         foodItems.forEach((item) => {
-            fs.unlink(`uploads/${item.image}`, (err) => {
+            fs.unlink(`public/${item.image}`, (err) => {
                 if (err) {
                     console.log(err);
                 }

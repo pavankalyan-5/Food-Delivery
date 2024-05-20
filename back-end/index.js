@@ -6,9 +6,6 @@ import userRouter from "./routes/userRoute.js";
 import 'dotenv/config';
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
-import path from 'path';
-
-const __dirname = path.resolve();
 
 // app config
 const app = express();
@@ -28,7 +25,7 @@ connectDB();
 
 // routes
 app.use("/api/food", foodRouter);
-app.use("/images", express.static(path.join(__dirname, 'public')));
+app.use("/images", express.static('public'));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);

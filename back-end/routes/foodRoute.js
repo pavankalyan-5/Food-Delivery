@@ -1,15 +1,13 @@
 import express from 'express';
 import { addBulkFoodItems, addFoodItem, deleteAllFoodItems, deleteFoodItem, getFoodItems } from '../controllers/foodController.js';
 import multer from 'multer';
-import path from 'path';
 import { debuggerLog } from '../middleware/auth.js';
-const __dirname = path.resolve();
 const foodRouter = express.Router();
 
 // Image storage engine
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, path.join(__dirname, 'public'));
+      cb(null, 'public');
     },
     filename: (req, file, cb) => {
       cb(null, `${Date.now()}${file.originalname}`);
