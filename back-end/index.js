@@ -29,7 +29,7 @@ connectDB();
 
 // routes
 app.use("/api/food", foodRouter);
-app.use("/images", express.static(path.join(__dirname, '/public/')));
+app.use("/images", express.static(path.join(__dirname, 'public')));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);

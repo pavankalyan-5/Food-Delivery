@@ -4,15 +4,12 @@ import multer from 'multer';
 import path from 'path';
 import { debuggerLog } from '../middleware/auth.js';
 const __dirname = path.resolve();
-
-console.log('__dirname', __dirname)
-
 const foodRouter = express.Router();
 
 // Image storage engine
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, path.join(__dirname, '/public/'));
+      cb(null, path.join(__dirname, 'public'));
     },
     filename: (req, file, cb) => {
       cb(null, `${Date.now()}${file.originalname}`);
