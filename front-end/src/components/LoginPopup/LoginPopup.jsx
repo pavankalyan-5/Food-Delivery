@@ -17,7 +17,7 @@ const LoginPopup = ({setShowLogin}) => {
     const onChangeHandler = (e) => {
         setUserData({
             ...userData,
-            [e.target.type]: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -44,7 +44,7 @@ const LoginPopup = ({setShowLogin}) => {
         </div>
         <div className="login-popup-inputs">
             {currState === "Sign Up" && (
-                <input name='name' onChange={onChangeHandler} value={userData?.name} type="text" placeholder='Your name' required /> )
+                <input onChange={onChangeHandler} value={userData?.name} type="text" placeholder='Your name' name='name' required /> )
             }
             {/* <input type="text" placeholder='Your name' required />  */}
             <input type="email" name='email' onChange={onChangeHandler} value={userData?.email}  placeholder='Your email' required />
