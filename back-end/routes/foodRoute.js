@@ -20,7 +20,7 @@ const upload = multer({ storage });
 foodRouter.post('/add', upload.single("image"), addFoodItem);
 foodRouter.get('/all', debuggerLog, getFoodItems);
 foodRouter.post('/delete/:id', deleteFoodItem);
-foodRouter.post('/bulk-add', upload.array('images'), addBulkFoodItems);
+foodRouter.post('/bulk-add', addBulkFoodItems);
 foodRouter.post('/bulk-delete', deleteAllFoodItems);
 
 

@@ -88,18 +88,9 @@ export const deleteAllFoodItems = async (req, res) => {
 }
 
 export const addBulkFoodItems = async (req, res) => {
-    const foodItems = JSON.parse(req.body.foodItems);
-    const files = req.files;
+    const foodItems = req.body;
 
     try {
-        foodItems.forEach((item, index) => {
-            const file = files.find(file => file.originalname === item.image);
-            if (file) {
-                // Update the image path in the food item
-                item.image = file.filename;
-            }
-        });
-
         await foodModel.insertMany(foodItems);
         res.status(201).json({
             success: true,
