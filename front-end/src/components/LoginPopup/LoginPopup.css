@@ -72,3 +72,12 @@
     cursor: pointer;
     font-weight: 500;
 }
+
+.error-message {
+    color: red;
+    align-self: center;
+}
+
+.error-field {
+    border-color: red !important;
+}

@@ -22,13 +22,15 @@ export const loginUser = async (req, res) => {
         return res.status(404).json({
             success: false,
             message: "User not found",
+            type: 'email'
         });
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if(!isMatch) {
         return res.status(400).json({
             success: false,
-            message: "Invalid credentials",
+            message: "Invalid password",
+            type: 'password'
         })
     }
     const token = createToken(user._id);
@@ -55,6 +57,7 @@ export const registerUser = async (req, res) => {
         return res.status(400).json({
             success: false,
             message: "Invalid email",
+            type : 'email'
         });
     }
 
@@ -64,6 +67,7 @@ export const registerUser = async (req, res) => {
         return res.status(400).json({
             success: false,
             message: "User already exists",
+            type : 'email'
         });
     }
 
@@ -72,6 +76,7 @@ export const registerUser = async (req, res) => {
         return res.status(400).json({
             success: false,
             message: "Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character",
+            type : 'password'
         });
     }
 

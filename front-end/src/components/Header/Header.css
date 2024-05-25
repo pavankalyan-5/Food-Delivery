@@ -30,8 +30,7 @@
     font-size: 1vw;
 }
 
-.header-contents button{
-    border: none;
+.header-contents a{
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
@@ -56,7 +55,7 @@
     .header-contents p{
         display: none;
     }
-    .header-contents button{
+    .header-contents a{
         padding: 2vw 4vw;
     }
 }

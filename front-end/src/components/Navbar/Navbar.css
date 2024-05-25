@@ -1,8 +1,12 @@
 .navbar {
-    padding: 20px 0px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0px;
+    background: #fffdfd;
+    z-index: 1;
 }
 
 .navbar .logo {
@@ -93,7 +97,7 @@
         gap: 20px;
     }
     .navbar-right img{
-        width: 20px;
+        width: 22px;
     }
     .navbar-right button{
         padding: 7px 20px;
@@ -139,10 +143,42 @@
     color: tomato;
 } 
 
-@media (max-width: 750px) {
+.left-nav {
+    position: relative;
+    
+}
+
+@media (max-width: 768px) {
    
     .navbar-menu {
-       display: none;
+        display: none;
     }
-    
+
+    .navbar .logo {
+        position: relative;
+        left: 50%;
+        width: 100px;
+    }
+
+    .open-left-nav{
+        display: flex;
+        flex-flow: column nowrap;
+        color: rgb(0, 0, 0);
+        gap: 20px;
+        padding: 60px 20px;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 220px;
+        background-color: whitesmoke;
+        transition: all 0.3s ease-in-out;
+    }
+    .close-btn{
+        z-index: 11;
+        cursor: pointer;
+        position: fixed;
+        left: 180px;
+    }
 }

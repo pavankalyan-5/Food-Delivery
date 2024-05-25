@@ -1,0 +1,29 @@
+.humburger{
+    display: none;  
+}
+
+.humbuger-line {
+    width: 1.5rem;
+    height: 0.25rem;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+   
+    .humburger {
+        width: 1rem;
+        height: 1.5rem;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 20;
+        cursor: pointer;
+    }   
+    
+    .active-humburger{
+        display: none;
+    }
+}

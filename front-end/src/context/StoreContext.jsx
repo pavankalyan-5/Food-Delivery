@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
     const { children } = props
 
     const [cartItems, setCartItems] = useState({});
-    const url = 'https://tomato-api.vercel.app'
+    const url = 'http://localhost:4000'
     const [token, setToken] = useState(null)
     const [food_list, setFoodList] = useState([])
 
