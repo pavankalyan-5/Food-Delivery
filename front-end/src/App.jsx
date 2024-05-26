@@ -16,7 +16,7 @@ function App() {
   const [showLogin, setShowLogin] = useState(false)
   return (
     <>
-    {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : null}
+    {showLogin ? <LoginPopup setShowLogin={setShowLogin} showLogin={showLogin}/> : null}
     <ToastContainer />
     <Navbar setShowLogin={setShowLogin}/>
       <div className='app'>
