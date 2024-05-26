@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const LoginPopup = ({setShowLogin}) => {
+const LoginPopup = ({setShowLogin, showLogin}) => {
 
     const { url, setToken, token } = useContext(StoreContext)
     const [currState, setCurrState] = useState('Sign Up')
@@ -51,7 +51,19 @@ const LoginPopup = ({setShowLogin}) => {
             password: ''
         })
         setErrorMessage(null)
-    },[currState])
+
+        // if showLogin is true disable scrolling
+        if (showLogin) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+
+    },[currState, showLogin])
 
 
   return (
